@@ -99,9 +99,12 @@ header {
 
 /* ========== MENU ========== */
 .header-container {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: end;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .navigation-container {
@@ -125,9 +128,9 @@ header {
 #menu-logo {
     color: var(--first-color);
     font-weight: var(--font-medium);
-    margin-left: .5rem;
     font-size: var(--h3-font-size);
     font-weight: var(--font-semi-bold);
+    align-self: center;
 }
 
 .menu-icon:hover,  #open-menu:hover{
@@ -192,9 +195,37 @@ header {
 /* ========== MEDIA QUERIES ========== */
 /* small device */
 @media screen and (min-width: 768px) {
-}
-@media screen and (min-width: 768px) {
+    .navigation-container {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        box-shadow: none;
+    }
+
+    .header {
+        box-shadow: none;
+    }
+
+    header {
+        top: 0;
+    }
+
+    #close-menu, #open-menu {
+        display: none;
+    }
+
+    .header-container {
+        justify-content: space-between;
+        align-items: center;
+    }
     
+    .hamburger-menu {
+        display: none;
+    }
+
+    #menu-logo {
+        font-size: var(--h2-font-size);
+    }
 }
     
 /* medium device */
