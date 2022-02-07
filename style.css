@@ -7,6 +7,7 @@
     --first-color: hsl(30, 55%, 50%);
     --first-color-lighter: hsla(30, 55%, 50%, 0.301);
     --first-color-alt: hsl(30, 43%, 42%);
+    --first-color-alt-lighter:rgb(153, 130, 106);
     --text-color: hsl(30, 8%, 45%);
     --text-color-alt: hsl(30, 35%, 25%);
     --body-color: hsl(30, 60%, 98%);
@@ -244,7 +245,7 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: space-between;
+    align-items: center;
 }
 
 .paragraphs-container {
@@ -374,6 +375,63 @@ h3 {
     color: var(--body-color);
     text-decoration: underline;
     margin-left: .5rem;
+}
+/* ========== ACCORDIAN ========== */
+
+.accordian-container {
+    max-width: 100%;
+    margin-top: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.accordian-container .accordian-content-box {
+    position: relative;
+    margin: .5rem 1rem;
+}
+
+.accordian-container .accordian-content-box .accordian-label {
+    position: relative;
+    padding: 1rem;
+    padding-left: 2rem;
+    background-color: var(--first-color-alt);
+    color: var(--body-color);
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.accordian-container .accordian-content-box .accordian-label::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+
+}
+
+.accordian-container .accordian-content-box.active .accordian-label::before {
+    content: '-';
+}
+
+.accordian-container .accordian-content-box .content {
+    position: relative;
+    background: var(--body-color-alt);
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    opacity: 0;
+}
+
+.accordian-container .accordian-content-box.active .content {
+    height: auto;
+    padding: 2rem;
+    opacity: 1;
 }
 
 /* ========== CONTACT ========== */

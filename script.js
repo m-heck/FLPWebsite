@@ -64,6 +64,15 @@ sliders.forEach(slider => {
   appearOnScroll.observe(slider);
 })
 
+/* ============= ACCORDIAN ============= */
+const accordian = document.getElementsByClassName('accordian-content-box');
+
+for (i = 0; i < accordian.length; i++) {
+  accordian[i].addEventListener('click', function() {
+    this.classList.toggle('active');
+  })
+}
+
 /* ============= TESTING ============= */
 var docWidth = document.documentElement.offsetWidth;
 
