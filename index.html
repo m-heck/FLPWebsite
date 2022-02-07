@@ -3,28 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./app/images/flplogo.PNG">
+  <link rel="icon" type="image/png" sizes="32x32" href="./flplogo.PNG">
   <!-- ====================== ICONS ====================== -->
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-  <!-- ====================== SWIPER CSS ====================== -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" type="text/css">
+  <!-- ====================== FONT ====================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" type="text/css">
   <!-- ====================== CSS ====================== -->
-  <link rel="stylesheet" type 'text/css' href="./app/css/style.css">
+  <link rel="stylesheet" type 'text/css' href="./style.css">
   <title>UF FLP</title>
 </head>
 <body>
+  
   <!-- ====================== HEADER ====================== -->
   <header class="header" id="header">
     <nav class="header-container">
       <a href='#' id="menu-logo">
-        <!--<img src='./app/images/flplogo.PNG' width='2rem'> -->
-        <p>FLP</p>
+        <p>UF FLP</p>
       </a>
       <div class="navigation-container" id="navigation">
-        <a href="#" class="menu-icon"><i class="uil uil-estate"></i>HOME</a>
-        <a href="#" class="menu-icon"><i class="uil uil-question-circle"></i>ABOUT</a>
-        <a href="#" class="menu-icon"><i class="uil uil-award-alt"></i>LEADERSHIP</a>
-        <a href="#" class="menu-icon"><i class="uil uil-schedule"></i>EVENTS</a>
-        <a href="#" class="menu-icon"><i class="uil uil-mailbox"></i>CONTACT</a>
+        <a href="#home-container" class="menu-icon"><i class="uil uil-estate"></i>HOME</a>
+        <a href="#about-title" class="menu-icon"><i class="uil uil-question-circle"></i>ABOUT</a>
+        <a href="#leadership-title" class="menu-icon"><i class="uil uil-award-alt"></i>LEADERSHIP</a>
+        <a href="#events-title" class="menu-icon"><i class="uil uil-schedule"></i>EVENTS</a>
+        <a href="#contact-title" class="menu-icon"><i class="uil uil-mailbox"></i>CONTACT</a>
         <i class="uil uil-minus" class="show-menu" id="close-menu"></i>
       </div>
       <div class="hamburger-menu">
@@ -35,18 +38,105 @@
   <!-- ====================== MAIN ====================== -->
   <main class="main">
     <!-- ====================== HOME ====================== -->
-    <h1>UF's Freshman Leadership Program</h1>
+    <div class="main-container" id="home-container">
+      <div class="parallax-scroll" id="home-scroll-image">
+        <h1 class="fade-in"><a href="#" id="home-title" class="body-self-links">Freshman Leadership Program</a></h1>
+      </div>
+      
     
-    <!-- ====================== ABOUT ====================== -->
-    <!-- ====================== LEADERSHIP ====================== -->
-    <!-- ====================== EVENTS ====================== -->
-    <!-- ====================== CONTACT ====================== -->
+      <div class="paragraphs-container" id="home-paragraphs-container">
+        <p class="fade-in">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum leo lectus. Suspendisse ac iaculis diam. Sed sed metus id mauris aliquet molestie. Donec risus lectus, dapibus non dui at, dignissim sagittis lorem. 
+        </p>
+        <p class="fade-in">
+          Aliquam lobortis sapien ac urna finibus tincidunt. Sed sed dui commodo erat posuere ullamcorper. Quisque ullamcorper nisl et risus commodo mollis id sed dui. Donec volutpat in lorem sit amet varius. Ut convallis ipsum sed pellentesque venenatis. Aliquam id diam faucibus, volutpat ex sed, interdum est. Aenean a nisi sit amet augue maximus ultrices ac sed ex.
+        </p>
+        <p class="fade-in">
+          Donec est ligula, euismod eget neque non, pellentesque ullamcorper dolor. Duis tellus metus, efficitur et metus et, faucibus tempor nibh. Etiam sagittis consectetur semper. Nullam a fermentum tellus. In congue vehicula dui a egestas. Cras gravida, magna nec viverra sodales, lacus mauris pharetra nisl, nec suscipit dui enim eget nunc. Sed odio nibh, mollis nec augue non, auctor ultrices mauris. Morbi nulla neque, elementum et sapien id, malesuada laoreet arcu. Fusce volutpat ullamcorper tincidunt. Aliquam posuere laoreet neque. Donec vitae justo gravida mauris vulputate tincidunt. Sed a eros laoreet lectus aliquam ultricies at faucibus leo. Vivamus accumsan eros non ligula bibendum, in volutpat nibh placerat.
+        </p>
+      </div>
+    </div>
 
+    <!-- ====================== ABOUT ====================== -->
+
+    <div class="main-container" id="about-container">
+      <h1 class="fade-in"><a href="#about-title" id="about-title" class="body-self-links">About</a></h1>
+      <div class="paragraphs-container" id="home-paragraphs-container">
+        <p class="fade-in">
+          Cras ac tempor ante. Nam vel pulvinar felis, at sodales nisl. Etiam pellentesque semper nunc nec tincidunt. Phasellus tincidunt orci eget ipsum tristique condimentum. Nulla sed nunc consequat, imperdiet magna sit amet, mollisß sapien. Aliquam dapibus eleifend malesuada. Sed sodales eu nunc sit amet eleifend.
+        </p>
+        <p class="fade-in">
+          Nulla lobortis, nunc eget consectetur interdum, magna urna pretium mi, vel vestibulum mi nisl mattis diam. Proin sit amet ultrices quam, quis dignissim sem. Etiam egestas eros eget massa aliquet maximus. Curabitur sodales suscipit arcu et euismod. Cras convallis tincidunt aliquet. Curabitur gravida nisi tellus. Proin sagittis sed ligula in egestas.
+        </p>
+        <p class="fade-in">
+          Nam non lorem quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla feugiat bibendum odio quis laoreet. Aenean vulputate augue vel tempor cursus. Ut in euismod purus.
+        </p>
+        <p class="fade-in">
+          Suspendisse felis libero, euismod non nisi non, posuere viverra felis. Donec vulputate diam turpis, quis ultrices sapien tempus sed. Sed viverra dictum magna, at feugiat mauris condimentum nec. Cras id mollis tortor. Etiam felis ex, finibus ac velit a, congue imperdiet nibh. Morbi vitae dignissim lorem, ut tempus massa. Sed molestie faucibus ex, quis maximus tortor pulvinar consequat. Morbi id scelerisque nisl. Curabitur ante magna, euismod at sem at, lobortis scelerisque ex. Quisque aliquet, dolor sit amet sollicitudin tincidunt, elit ex luctus nisl, id sagittis nunc ex ut est. Vestibulum ex erat, vehicula sit amet nulla eu, bibendum maximus dolor.
+        </p>
+      </div>
+    </div>
+    
+    <!-- ====================== LEADERSHIP ====================== -->
+    <div class="main-container" id="leadership-container">
+      <h1 class="fade-in"><a href="#leadership-title" id="leadership-title" class="body-self-links">Leadership</a></h1>
+      <div class="image-container" id="leadership-image-container">
+        <div class="image-caption-pair">
+          <img class="person-image" src="./image-placeholder.JPEG" alt="black blank placeholder">
+          <p class="image-caption">Placeholder 1</p>
+        </div>
+        <div class="image-caption-pair">
+          <img class="person-image" src="./image-placeholder.JPEG" alt="black blank placeholder">
+          <p class="image-caption">Placeholder 2</p>
+        </div>
+        <div class="image-caption-pair">
+          <img class="person-image" src="./image-placeholder.JPEG" alt="black blank placeholder">
+          <p class="image-caption">Placeholder 3</p>
+        </div>
+        <div class="image-caption-pair">
+          <img class="person-image" src="./image-placeholder.JPEG" alt="black blank placeholder">
+          <p class="image-caption">Placeholder 4</p>
+        </div>
+        <div class="image-caption-pair">
+          <img class="person-image" src="./image-placeholder.JPEG" alt="black blank placeholder">
+          <p class="image-caption">Placeholder 5</p>
+        </div>
+        <div class="image-caption-pair">
+          <img class="person-image" src="./image-placeholder.JPEG" alt="black blank placeholder">
+          <p class="image-caption">Placeholder 6</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================== EVENTS ====================== -->
+    <div class="main-container" id="leadership-container">
+      <h1 class="fade-in><a href="#events-title" id="events-title" class="body-self-links">Events</a></h1>
+      <img id="calendar" src="./calendar-placeholder.PNG" alt="blank calendar placeholder" class="fade-in">
+    </div>
+    <!-- ====================== CONTACT ====================== -->
+    <div class="main-container" id="contact-container">
+      <div class="form-container">
+        <form class="fade-in">
+          <h3><a href="#contact-title" id="contact-title" class="body-self-links">CONTACT US</a></h3>
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Your Email" required>
+          <input type="text" id="subject" placeholder="Email Subject" required>
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="submit">SEND</button>
+          
+        </form>
+      </div>
+    </div>
+
+    <!-- ====================== FOOTER ====================== -->
+    
   </main>
-  <!-- ====================== FOOTER ====================== -->
-  <!-- ====================== SCROLL TOP ====================== -->
-  <!-- ====================== SWIPER JS ====================== -->
-  <!-- ====================== MAIN JS ====================== -->
-  <script src='./app/js/script.js'></script>
+  <div class="footer">
+    <i class="uil uil-link"><a href="https://linktr.ee/aasuflp">Linktree</a></i>
+    <i class="uil uil-instagram"><a href="https://www.instagram.com/ufflp/?hl=en">Instagram</a></i>
+    <i class="uil uil-facebook-f"><a href="https://www.facebook.com/aasuflp">Facebook</a></i>
+  </div>
+
+  <script src='./script.js'></script>
 </body>
 </html>
