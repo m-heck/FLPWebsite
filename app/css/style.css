@@ -356,19 +356,6 @@ h3 {
     height: auto;
 }
 
-/* hover */
-.image-box {
-    overflow: hidden;
-    transition: 0.5s;
-}
-
-.image-box:hover {
-    z-index: 1;
-    transform: scale(1.125);
-    box-shadow: 0 25px 40px grey;
-    height: 100%;
-}
-
 /* ========== ACCORDIAN ========== */
 
 .accordian-container {
@@ -595,6 +582,7 @@ form button:hover {
     opacity: 0;
     transition: 0.6s;
     transition-property: transform, opacity;
+    font-size: var(--normal-font-size);
 }
 
 .image-card-box:hover .details p {
@@ -777,6 +765,28 @@ form button:hover {
     .image-card-box {
         flex: 100%;
     }
+
+    .box-title {
+        padding-top: 3rem;
+    }
+
+    .details {
+        font-size: var(--small-font-size);
+    }
+
+    /* event cards */
+    .image-card-box img {
+        opacity: 0.8;
+    }
+    
+    .image-card-box .details h3 {
+        transform: translateY(-30px);
+    }
+    
+    .image-card-box .details p {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
 }
 
 
@@ -841,6 +851,19 @@ form button:hover {
 
     #second-home-title {
         padding-top: 5rem;
+    }
+
+    /* leadership hover */
+    .image-box {
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .image-box:hover {
+        z-index: 1;
+        transform: scale(1.125);
+        box-shadow: 0 25px 40px grey;
+        height: 100%;
     }
 }
     
