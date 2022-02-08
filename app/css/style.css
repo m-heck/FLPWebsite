@@ -23,7 +23,7 @@
     --h3-font-size: 1.125rem;
     --normal-font-size: .938rem;
     --small-font-size: .70rem;
-    --mini-font-size: .50rem;
+    --mini-font-size: .5rem;
 
     /* ===== Font weight ===== */
     --font-medium: 500;
@@ -582,7 +582,6 @@ form button:hover {
     opacity: 0;
     transition: 0.6s;
     transition-property: transform, opacity;
-    font-size: var(--normal-font-size);
 }
 
 .image-card-box:hover .details p {
@@ -770,10 +769,6 @@ form button:hover {
         padding-top: 3rem;
     }
 
-    .details {
-        font-size: var(--small-font-size);
-    }
-
     /* event cards */
     .image-card-box img {
         opacity: 0.8;
@@ -784,6 +779,7 @@ form button:hover {
     }
     
     .image-card-box .details p {
+        font-size: var(--mini-font-size);
         opacity: 1;
         transform: translateY(-20px);
     }
