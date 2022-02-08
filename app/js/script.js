@@ -76,7 +76,7 @@ for (i = 0; i < accordian.length; i++) {
 /* ============= PARALLAX ============= */
 function checkForWindowResize() {
   console.log(`Screen width: ${window.innerWidth}`);
-  if (window.innerWidth >= 768) {
+  if (window.innerWidth >= 481) {
     console.log('large screen');
     let bg = document.getElementById('bg');
     let curtain = document.getElementById('curtain');
