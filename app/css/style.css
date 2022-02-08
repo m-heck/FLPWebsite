@@ -106,6 +106,7 @@ header {
     z-index: var(--z-fixed);
     background-color: var(--body-color);
     height: 3rem;
+    overflow-x: hidden;
 }
 
 /* ========== HEADER/MENU ========== */
