@@ -714,11 +714,7 @@ form button:hover {
 
 /* ========== MEDIA QUERIES ========== */
 /* small device */
-@media screen and (max-width: 480px) {
-    
-    header {
-        max-width: 480px;
-    }
+@media screen and (max-width: 767px) {
 
     .main {
         margin-top: 1rem;
@@ -793,7 +789,7 @@ form button:hover {
 }
 
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
     .navigation-container {
         flex-direction: row;
         gap: 1rem;
