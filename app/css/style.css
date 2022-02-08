@@ -89,6 +89,8 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
