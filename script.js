@@ -73,6 +73,21 @@ for (i = 0; i < accordian.length; i++) {
   })
 }
 
+/* ============= PARALLAX ============= */
+let bg = document.getElementById('bg');
+let curtain = document.getElementById('curtain');
+let signs = document.getElementById('signs');
+let text = document.getElementById('home-title');
+
+window.addEventListener('scroll', function() {
+  var value = window.scrollY;
+
+  bg.style.top = value * 0.5 + 'px';
+  text.style.top = value * 1 + 'px';
+  curtain.style.top = value * 0.60 + 'px';
+  curtain.style.left = -value * 0.05 + 'px';
+})
+
 /* ============= TESTING ============= */
 var docWidth = document.documentElement.offsetWidth;
 

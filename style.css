@@ -114,6 +114,7 @@ header {
     align-items: end;
     padding-left: 1rem;
     padding-right: 1rem;
+    overflow: hidden;
 }
 
 .navigation-container {
@@ -160,6 +161,7 @@ header {
     box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
     transition: 0.3s;
     overflow: hidden;
+    z-index: 10000000;
 }
 
 @media screen and (max-width: 767px) {
@@ -259,36 +261,7 @@ h3 {
     gap: 2rem;
 }
 
-.image-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-}
 
-.image-container > * {
-    margin-bottom: 2rem;
-}
-
-.person-image {
-    width: 100%;
-    height: auto;
-}
-
-.image-caption-pair {
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    max-width: 25%;
-    width: 100%;
-    height: auto;
-}
 
 #calendar {
     align-self: center;
@@ -311,40 +284,12 @@ h3 {
     color: var(--text-color-alt);
 }
 
-.parallax-scroll {
-    background-size: cover;
-    height: 15rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 3rem;
-
-    margin-left: calc(-100vw / 2 + 500px / 2);
-    margin-right: calc(-100vw / 2 + 500px / 2);
-    margin-top: -4rem;
-
-    /* parallax */
-    position: relative;
-    opacity: 0.90;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-#home-scroll-image {
-    background-image: url(./leaves-bg.jpeg);
-    opacity: 0.80;
-}
 
 /* ========== HEADER ========== */
 #home-title {
-    color: black;
-    background-color: hsla(30, 60%, 98%, 0.719);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
+    font-family: 'Oswald', sans-serif;
+    color: var(--body-color);
+    font-weight: 700;
 }
 
 #home-container {
@@ -376,6 +321,75 @@ h3 {
     text-decoration: underline;
     margin-left: .5rem;
 }
+
+/* ========== LEADERSHIP ========== */
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container > * {
+    margin-bottom: 2rem;
+}
+
+.person-image {
+    width: 100%;
+    height: auto;
+}
+
+.image-caption-pair {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    max-width: 25%;
+    width: 100%;
+    height: auto;
+}
+
+/* hover */
+.image-caption-pair:hover {
+    transform: translateY(15px);
+}
+
+.image-caption-pair:hover:before {
+    opacity: 1;;
+}
+
+.image-caption-pair:hover .overlay-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-caption-pair:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left:0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--body-color), transparent);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.image-caption-pair img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
 /* ========== ACCORDIAN ========== */
 
 .accordian-container {
@@ -561,6 +575,97 @@ form button:hover {
     opacity: 1;
 }
 
+/* ========== PARALLAX ========== */
+
+.parallax-scroll {
+    background-size: cover;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    margin-left: calc(-100vw / 2 + 500px / 2);
+    margin-right: calc(-100vw / 2 + 500px / 2);
+    margin-top: -4rem;
+
+    /* parallax */
+    position: relative;
+    opacity: 0.90;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#home-scroll-image {
+    background-image: url(./leaves-bg.jpeg);
+    opacity: 0.80;
+}
+
+/* New parallax */
+.parallax-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* margin-left: calc(-100vw / 2 + 500px / 2);
+    margin-right: calc(-100vw / 2 + 500px / 2); */
+
+    align-self: center;
+    justify-self: center;
+}
+
+.parallax-container:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, var(--first-color), transparent);
+    z-index: 10000;
+}
+
+.parallax-container:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--first-color-alt);
+    z-index: 10000;
+    mix-blend-mode: color;
+}
+
+.parallax-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+#home-title {
+    position: relative;
+    z-index: 1;
+    font-weight: 900;
+    font-size: 50px;
+}
+
+#curtain {
+    top: 20%;
+    width: 120%;
+    height: 120%;
+}
+
 /* ========== MEDIA QUERIES ========== */
 /* small device */
 @media screen and (max-width: 767px) {
@@ -581,13 +686,36 @@ form button:hover {
         margin-bottom: 4rem;
     }
 
+    .parallax-container {
+        height: 30vh;
+    }
+
     .parallax-scroll {
         margin-left: -6rem;
         margin-right: -6rem;
     }
 
+    #home-title {
+        z-index: 1000000;
+        font-size: 1.5rem;
+        font-weight: 500;
+        background-color: hsla(32, 49%, 76%, 0.678);
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        padding-left: 0.125rem;
+        padding-right: 0.125rem;
+    }
+
     .header {
         border-radius: 1rem 1rem 0 0;
+    }
+
+    #curtain, #signs {
+        display: none;
+    }
+
+    #home-container {
+        padding-top: 0;
     }
 }
 
@@ -631,12 +759,28 @@ form button:hover {
         font-size: 80%;
     }
 
-    .main {
-        margin-top: 4rem;
-    }
-
     .parallax-scroll {
         background-attachment: normal;
+    }
+
+    .main-container {
+        margin-top: 0;
+    }
+
+    .main {
+        margin-top: 0;
+    }
+
+    .parallax-container {
+        top: 0;
+    }
+
+    #home-container {
+        padding-top: 0;
+    }
+
+    #second-home-title {
+        padding-top: 5rem;
     }
 }
     

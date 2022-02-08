@@ -9,7 +9,7 @@
   <!-- ====================== FONT ====================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
   <!-- ====================== CSS ====================== -->
   <link rel="stylesheet" type 'text/css' href="./style.css" charset="UTF-8">
   <title>UF FLP</title>
@@ -39,11 +39,16 @@
   <main class="main">
     <!-- ====================== HOME ====================== -->
     <div class="main-container" id="home-container">
-      <div class="parallax-scroll" id="home-scroll-image">
+
+      <div class="parallax-container" id="home-parallax-container">
+        <img src="japan-bg.JPG" alt="image of japanese restaurant" id="bg">
+        <img src="curtain.PNG" id="curtain">
+        <img src="signs.PNG" id="signs">
         <h1 class="fade-in"><a href="#" id="home-title" class="body-self-links">Freshman Leadership Program</a></h1>
       </div>
       
-    
+      <h1 class="fade-in"><a id="second-home-title" class="body-self-links">Home</a></h1>
+  
       <div class="paragraphs-container" id="home-paragraphs-container">
         <p class="fade-in">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum leo lectus. Suspendisse ac iaculis diam. Sed sed metus id mauris aliquet molestie. Donec risus lectus, dapibus non dui at, dignissim sagittis lorem. 
@@ -109,6 +114,12 @@
       <div class="image-container" id="leadership-image-container">
         <div class="image-caption-pair">
           <img class="person-image" src="./image-placeholder.JPEG" alt="black blank placeholder">
+          <!--Delete start-->
+          <div class="overlay-text">
+            <h3>Position Title</h3>
+            <p>Sed urna velit, blandit eget quam ut, rutrum vestibulum augue. Aliquam convallis arcu nec risus ultricies bibendum. Mauris non felis nec risus rhoncus tempor et sit amet tellus. Nulla id consectetur quam, eu tempus nulla.</p>
+          </div>
+          <!-- Delete end-->
           <p class="image-caption">Placeholder 1</p>
         </div>
         <div class="image-caption-pair">
@@ -136,7 +147,7 @@
 
     <!-- ====================== EVENTS ====================== -->
     <div class="main-container" id="leadership-container">
-      <h1 class="fade-in><a href="#events-title" id="events-title" class="body-self-links">Events</a></h1>
+      <h1 class="fade-in"><a href="#events-title" id="events-title" class="body-self-links">Events</a></h1>
       <img id="calendar" src="./calendar-placeholder.PNG" alt="blank calendar placeholder" class="fade-in">
     </div>
     <!-- ====================== CONTACT ====================== -->
