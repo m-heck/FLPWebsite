@@ -83,7 +83,7 @@ body {
     font-size: var(--normal-font-size);
     font-family: var(--body-font);
     background-color: var(--body-color);
-    color: --text-color;
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;

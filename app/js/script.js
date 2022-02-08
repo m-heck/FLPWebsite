@@ -74,23 +74,27 @@ for (i = 0; i < accordian.length; i++) {
 }
 
 /* ============= PARALLAX ============= */
-const mediaQuery = window.matchMedia('(min-width: 768px)');
+function checkForWindowResize() {
+  console.log(`Screen width: ${window.innerWidth}`);
+  if (window.innerWidth >= 768) {
+    console.log('large screen');
+    let bg = document.getElementById('bg');
+    let curtain = document.getElementById('curtain');
+    let signs = document.getElementById('signs');
+    let text = document.getElementById('home-title');
 
-if (mediaQuery.matches) {
-  let bg = document.getElementById('bg');
-  let curtain = document.getElementById('curtain');
-  let signs = document.getElementById('signs');
-  let text = document.getElementById('home-title');
+    window.addEventListener('scroll', function() {
+      var value = window.scrollY;
 
-  window.addEventListener('scroll', function() {
-    var value = window.scrollY;
-
-    bg.style.top = value * 0.5 + 'px';
-    text.style.top = value * 1 + 'px';
-    curtain.style.top = value * 0.60 + 'px';
-    curtain.style.left = -value * 0.05 + 'px';
-})
+      bg.style.top = value * 0.5 + 'px';
+      text.style.top = value * 1 + 'px';
+      curtain.style.top = value * 0.60 + 'px';
+      curtain.style.left = -value * 0.05 + 'px';
+    })
+  }
 }
+
+window.addEventListener('resize', checkForWindowResize)
 
 /* ============= TESTING ============= */
 var docWidth = document.documentElement.offsetWidth;
