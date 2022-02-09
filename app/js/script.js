@@ -96,6 +96,9 @@ function checkForWindowResize() {
 
 window.addEventListener('resize', checkForWindowResize);
 
+//runs initial function
+checkForWindowResize();
+
 /* ============= TESTING ============= */
 var docWidth = document.documentElement.offsetWidth;
 
