@@ -527,6 +527,11 @@ form button:hover {
     
 }
 
+#calendar {
+    width: 100%;
+    height: 30rem;
+}
+
 .image-card-box {
     background: var(--body-color-alt);
     position: relative;
@@ -787,6 +792,14 @@ form button:hover {
         transform: translateY(-20px);
     }
 }
+
+/* phones only */
+
+@media screen and (max-width: 467px) {
+    
+}
+
+/* large devices */
 
 
 @media screen and (min-width: 768px) {
