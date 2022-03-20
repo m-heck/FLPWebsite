@@ -619,6 +619,7 @@ form button:hover {
     height: 30rem;
     justify-self: center;
     align-self: center;
+    border: red solid 3px;
 }
 
 .st-bg, .st-bg-today, .st-dtitle {
