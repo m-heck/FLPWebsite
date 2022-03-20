@@ -4,14 +4,14 @@
     /* ===== Colors ===== */
 
     /* HSL color mode */
-    --first-color: hsl(350, 45%, 50%);
-    --first-color-lighter: hsla(350, 45%, 70%, 0.301);
-    --first-color-alt: hsl(350, 30%, 40%);
-    --first-color-alt-lighter:rgba(350, 130, 106, 0.692);
-    --text-color: hsl(30, 8%, 45%);
+    --first-color: hsl(350, 55%, 50%);
+    --first-color-lighter: hsla(350, 55%, 50%, 0.301);
+    --first-color-alt: hsl(350, 43%, 42%);
+    --first-color-alt-lighter:hsla(350, 55%, 50%, 0.692);
+    --text-color: hsl(350, 8%, 45%);
     --text-color-alt: hsl(350, 35%, 25%);
     --body-color: hsl(350, 60%, 98%);
-    --body-color-alt: hsl(350, 49%, 76%);
+    --body-color-alt: hsl(350, 29%, 76%);
 
     /* ===== Font and typography ===== */
     --body-font: 'Montserrat', sans-serif;
@@ -800,6 +800,7 @@ form button:hover {
     z-index: 1;
     font-weight: 900;
     font-size: 50px;
+    text-shadow: 1.5px 1.5px 10px #000000;
 }
 
 #curtain {
@@ -839,9 +840,8 @@ form button:hover {
 
     #home-title {
         z-index: 1000000;
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         font-weight: 500;
-        background-color: hsla(32, 49%, 76%, 0.678);
         padding-top: 0.25rem;
         padding-bottom: 0.25rem;
         padding-left: 0.125rem;
