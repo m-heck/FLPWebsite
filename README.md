@@ -1,11 +1,9 @@
-# FLPWebsite
+# JSAWebsite
 
 Todo:
 -Add new website elements
 -Make contact form work
--Add google calendar integration to events calendar
 -Clean up bugs
--Color scheme change? Logo addition?
 
 Tutorials that I used: 
 Navigation bar- https://www.youtube.com/watch?v=27JtRAI3QO8&t=988s
