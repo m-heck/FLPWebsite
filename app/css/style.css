@@ -4,14 +4,14 @@
     /* ===== Colors ===== */
 
     /* HSL color mode */
-    --first-color: hsl(350, 55%, 50%);
-    --first-color-lighter: hsla(350, 55%, 50%, 0.301);
-    --first-color-alt: hsl(350, 43%, 42%);
-    --first-color-alt-lighter:hsla(350, 55%, 50%, 0.692);
-    --text-color: hsl(350, 8%, 45%);
-    --text-color-alt: hsl(350, 35%, 25%);
-    --body-color: hsl(350, 60%, 98%);
-    --body-color-alt: hsl(350, 29%, 76%);
+    --first-color: hsl(370, 55%, 50%);
+    --first-color-lighter: hsla(370, 55%, 50%, 0.301);
+    --first-color-alt: hsl(370, 43%, 42%);
+    --first-color-alt-lighter:hsla(370, 55%, 50%, 0.692);
+    --text-color: hsl(370, 8%, 45%);
+    --text-color-alt: hsl(370, 35%, 25%);
+    --body-color: hsl(370, 60%, 98%);
+    --body-color-alt: hsl(370, 29%, 76%);
 
     /* ===== Font and typography ===== */
     --body-font: 'Montserrat', sans-serif;
