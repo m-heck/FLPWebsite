@@ -109,7 +109,7 @@ header {
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
-    height: 3rem;
+    height: 3.5rem;
 }
 
 /* ========== HEADER/MENU ========== */
@@ -945,8 +945,9 @@ form button:hover {
 @media screen and (min-width: 768px) {
 
     .navigation-container {
+        margin-right: 1rem;
         flex-direction: row;
-        gap: 1rem;
+        gap: 2rem;
         align-items: center;
         box-shadow: none;
     }
