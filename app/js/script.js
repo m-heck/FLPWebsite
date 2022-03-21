@@ -74,11 +74,37 @@ for (i = 0; i < accordian.length; i++) {
 }
 
 /* ============= CHANGE THEME COLOR ============= */
-const themeToggle = document.querySelectorAll('#theme-toggle');
+const themeToggle = document.getElementById('theme-toggle');
 
-themeToggle.addEventListener('click', function () {
-  this.classList.toggle('dark-mode');
-});
+let initialTheme = true;
+
+function toggleTheme() {
+  console.log('Toggling theme...');
+  const root = document.documentElement;
+  if (initialTheme) {
+    root.style.setProperty('--first-color', 'hsl(8, 55%, 50%)');
+    root.style.setProperty('--first-color-lighter', 'hsla(8, 55%, 50%, 0.301)');
+    root.style.setProperty('--first-color-alt', 'hsl(8, 43%, 42%)');
+    root.style.setProperty('--first-color-alt-lighter', 'hsla(0, 55%, 50%, 0.692)');
+    root.style.setProperty('--text-color', 'hsl(8, 15%, 45%)');
+    root.style.setProperty('--text-color-alt', 'hsl(8, 45%, 25%)');
+    root.style.setProperty('--background-color', 'hsl(8, 60%, 98%)');
+    root.style.setProperty('--background-color-alt', 'hsl(8, 29%, 76%)');
+    initialTheme = false;
+  } else {
+    root.style.setProperty('--first-color', 'hsl(7, 94%, 40%)');
+    root.style.setProperty('--first-color-lighter', 'hsla(7, 55%, 50%, 0.301)');
+    root.style.setProperty('--first-color-alt', 'hsl(7, 63%, 22%)');
+    root.style.setProperty('--first-color-alt-lighter', 'hsla(0, 55%, 50%, 0.692)');
+    root.style.setProperty('--text-color', 'hsl(8, 15%, 85%)');
+    root.style.setProperty('--text-color-alt', 'hsl(8, 25%, 75%)');
+    root.style.setProperty('--background-color', 'hsl(8, 10%, 3%)');
+    root.style.setProperty('--background-color-alt', 'hsl(8, 59%, 26%, 0.8)');
+    initialTheme = true;
+  }
+}
+
+themeToggle.addEventListener('click', toggleTheme);
 
 /* ============= PARALLAX ============= */
 function checkForWindowResize() {
