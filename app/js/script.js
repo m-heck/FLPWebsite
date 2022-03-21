@@ -73,6 +73,13 @@ for (i = 0; i < accordian.length; i++) {
   })
 }
 
+/* ============= CHANGE THEME COLOR ============= */
+const themeToggle = document.querySelectorAll('#theme-toggle');
+
+themeToggle.addEventListener('click', function () {
+  this.classList.toggle('dark-mode');
+});
+
 /* ============= PARALLAX ============= */
 function checkForWindowResize() {
   console.log(`Screen width: ${window.innerWidth}`);

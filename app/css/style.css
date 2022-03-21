@@ -338,6 +338,15 @@ h3 {
     margin-left: .5rem;
 }
 
+#theme-toggle {
+    color: var(--body-color);
+    text-decoration: underline;
+}
+
+.dark-mode {
+    
+}
+
 /* ========== LEADERSHIP ========== */
 
 .image-container {
