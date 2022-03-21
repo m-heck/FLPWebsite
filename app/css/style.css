@@ -14,10 +14,9 @@
     --background-color-alt: hsl(8, 59%, 26%, 0.8); /* Lighter and less saturated background color */
 
     /* ===== Font and typography ===== */
-    --body-font: 'Montserrat', sans-serif;
+    --body-font: 'Montserrat', sans-serif; /* Font for main text */
 
     /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
-    --big-font-size: 2rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1.125rem;
@@ -25,23 +24,11 @@
     --small-font-size: .70rem;
     --smaller-font-size: .70rem;
     --mini-font-size: .5rem;
-
-    /* ===== Font weight ===== */
-    --font-medium: 500;
-    --font-semi-bold: 800;
-
-    /* ===== Z index ===== */
-    --z-tooltip: 10;
-    --z-fixed: 100;
-    --z-modal: 1000;
-
-    --body-margin: 1.7rem;
 }
 
 /* Font for large devices */
 @media screen and (min-width: 968px) {
     :root {
-        --big-font-size: 3rem;
         --h1-font-size: 2.25rem;
         --h2-font-size: 1.5rem;
         --h3-font-size: 1.125rem;
@@ -112,7 +99,21 @@ header {
     height: 3.8rem;
 }
 
-/* ========== HEADER/MENU ========== */
+/* ========== HEADER/MENU CSS ========== */
+
+/* Sets header position and transitions */
+.header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--background-color);
+    padding: .7rem;
+    box-shadow: 0 -1px 4px var(--background-color-alt);
+    transition: 0.3s;
+    z-index: 10000000;
+}
+
+/* Holds everything in the header */
 .header-container {
     width: 100%;
     display: flex;
@@ -123,6 +124,7 @@ header {
     overflow: hidden;
 }
 
+/* Selects elements of the header, including the logo and links at the top */
 .header-container a {
     display: flex;
     gap: 1rem;
@@ -134,6 +136,7 @@ header {
     width: 1.8rem;
 }
 
+/* A container element for the navigation links at the top right */
 .navigation-container {
     max-width: 968px;
     display: flex;
@@ -145,20 +148,13 @@ header {
     font-size: var(--h3-font-size);
 }
 
+/* For mobile */
 .hamburger-menu {
     color: var(--text-color);
 }
 
 .hamburger-menu:hover {
     color: var(--text-color-alt);
-}
-
-#menu-logo {
-    color: var(--first-color);
-    font-weight: var(--font-medium);
-    font-size: var(--h3-font-size);
-    font-weight: var(--font-semi-bold);
-    align-self: center;
 }
 
 .menu-icon:hover,  #open-menu:hover{
@@ -169,18 +165,12 @@ header {
     color: var(--first-color-alt);
 }
 
-.header {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: var(--background-color);
-    padding: .7rem;
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
-    transition: 0.3s;
-    z-index: 10000000;
-}
-
+/* Creates navigation for mobile */
 @media screen and (max-width: 767px) {
+    .header-container a {
+        gap: .5rem;
+    }
+
     .navigation-container {
         position: fixed;
         bottom: -100%;
@@ -195,6 +185,7 @@ header {
     }
 }
 
+/* Icon spacing */
 .navigation-container i {
     padding: 0.25rem;
 }
