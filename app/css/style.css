@@ -4,14 +4,14 @@
     /* ===== Colors ===== */
 
     /* HSL color mode */
-    --first-color: hsl(370, 55%, 50%);
-    --first-color-lighter: hsla(370, 55%, 50%, 0.301);
-    --first-color-alt: hsl(370, 43%, 42%);
-    --first-color-alt-lighter:hsla(370, 55%, 50%, 0.692);
-    --text-color: hsl(370, 8%, 45%);
-    --text-color-alt: hsl(370, 35%, 25%);
-    --body-color: hsl(370, 60%, 98%);
-    --body-color-alt: hsl(370, 29%, 76%);
+    --first-color: hsl(8, 55%, 50%);
+    --first-color-lighter: hsla(8, 55%, 50%, 0.301);
+    --first-color-alt: hsl(8, 43%, 42%);
+    --first-color-alt-lighter:hsla(0, 55%, 50%, 0.692);
+    --text-color: hsl(8, 15%, 45%);
+    --text-color-alt: hsl(8, 45%, 25%);
+    --body-color: hsl(8, 60%, 98%);
+    --body-color-alt: hsl(8, 29%, 76%);
 
     /* ===== Font and typography ===== */
     --body-font: 'Montserrat', sans-serif;
@@ -109,7 +109,7 @@ header {
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
-    height: 3.5rem;
+    height: 3.8rem;
 }
 
 /* ========== HEADER/MENU ========== */
@@ -121,6 +121,17 @@ header {
     padding-left: 1rem;
     padding-right: 1rem;
     overflow: hidden;
+}
+
+.header-container a {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-logo {
+    width: 1.8rem;
 }
 
 .navigation-container {
