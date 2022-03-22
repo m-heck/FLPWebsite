@@ -695,7 +695,7 @@ form button:hover {
 }
 
 .image-card-box .details h3 {
-    color: var(--background-color);
+    color: white;
     font-weight: 500;
     text-transform: uppercase;
     transition: 0.4s;
