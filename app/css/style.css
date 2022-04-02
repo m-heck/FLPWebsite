@@ -37,7 +37,6 @@
 
     --body-margin: 1.7rem;
 }
-
 /* Font for large devices */
 @media screen and (min-width: 968px) {
     :root {
@@ -360,7 +359,6 @@ h3 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2rem;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -373,6 +371,7 @@ h3 {
 .person-image {
     width: 100%;
     height: auto;
+    padding: 5%;
 }
 
 .image-caption-pair {
@@ -384,7 +383,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    max-width: 25%;
+    max-width: 33%;
     width: 100%;
     height: auto;
 }
@@ -845,10 +844,6 @@ form button:hover {
 
     .main {
         margin-top: 1rem;
-    }
-
-    .image-container {
-        gap: 1rem;
     }
 
     .image-caption {
